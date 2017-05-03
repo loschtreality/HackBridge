@@ -1,3 +1,7 @@
+/**
+ * General Styles
+ */
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -7,6 +11,13 @@ a {
   color: #00B7FF;
 }
 
+/**
+ * General Classes
+ */
+
+.half-hr {
+  width: 50%;
+}
 
 .card {
   margin-top: 20px;
@@ -15,6 +26,10 @@ a {
 .inline {
   display: inline;
 }
+
+/**
+ * Specific Styles
+ */
 
 #volunteer-collapse {
   margin-top: 20px;
