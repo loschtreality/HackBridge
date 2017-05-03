@@ -12,7 +12,7 @@ var api = require('./routes/api');
 var student = require('./routes/student');
 
 var admin = require('./routes/admin');
-
+var userShow = require('./routes/users');
 var app = express();
 
 //handlebars partials setup
@@ -36,6 +36,7 @@ app.use('/api', api);
 app.use('/student',student)
 
 app.use('/admin', admin)
+app.use('/users/:id', userShow)
 
 
 // catch 404 and forward to error handler
