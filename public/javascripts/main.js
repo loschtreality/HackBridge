@@ -44,6 +44,12 @@ $("#volunteer-form").on("submit", function (e) {
 $("#admin-btn").click(function (e) {
   window.location.href = '/admin'
 })
+/**
+ * Student Form => Redirect to '/student'
+ */
+$("#register-btn").click(function (e) {
+  window.location.href = '/student'
+})
 
 /**
  * Volunteer Form - Page changes

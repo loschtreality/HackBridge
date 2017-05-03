@@ -1,4 +1,5 @@
 <form id="studentForm">
+  <legend id="studentHelp" class="form-text text-muted">Student Information:</legend>
   <div class="form-group row">
     <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
     <div class="col-sm-10">
@@ -71,6 +72,7 @@
       <input type="number" class="form-control" id="birthYear" placeholder="Birth Year">
     </div>
   </div>
+  <legend id="parentHelp" class="form-text text-muted">Parent/Guardian Information:</legend>
   <div class="form-group row">
     <label for="parentName" class="col-sm-2 col-form-label">Parent/Guardian Fullname</label>
     <div class="col-sm-10">
@@ -107,20 +109,16 @@
       <input type="tel" class="form-control" id="parentWorkPhone" placeholder="Parent/Guardian Work Phone #">
     </div>
   </div>
+  <legend id="studentEssays" class="form-text text-muted">Student Essays and Interests:</legend>
   <div class="form-group row">
-    <label for="dateSigned" class="col-sm-2 col-form-label">Date</label>
-    <div class="col-sm-10">
-      <input type="date" class="form-control" id="dateSigned" placeholder="Date">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="essay1" class="col-sm-2 col-form-label">Essay 1</label>
+    <small id="essayPrompt1" class="form-text text-muted">Why do you want to be a Techbridge girl?  What most excites you about being in a Science, Engineering and Technology program for girls?</small>
     <textarea class="form-control" rows="3" placeholder="Essay 1" id="essay1"></textarea>
   </div>
   <div class="form-group row">
-    <label for="essay2" class="col-sm-2 col-form-label">Essay 2</label>
+    <small id="essayPrompt2" class="form-text text-muted">If you could invent ANYTHING in the world using Science, Engineering and Technology, what would it be and why?</small>
     <textarea class="form-control" rows="3" placeholder="Essay 2" id="essay2"></textarea>
   </div>
+  <small id="interestsPrompt" class="form-text text-muted">Please list three things that interest you. For example: sports, science, art…</small>
   <div class="form-group row">
     <label for="interest1" class="col-sm-2 col-form-label">Interest 1</label>
     <div class="col-sm-10">
