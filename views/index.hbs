@@ -1,39 +1,47 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
-<div class="card">
-  <div class="card-block">
-    <h4 class="card-title">Register Student</h4>
-    <h6 class="card-subtitle mb-2 text-muted">Requires Parent Signature</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <button id="register-btn" class="btn btn-primary" type="button">Register</button>
-  </div>
-</div>
-<div class="card">
-  <div class="card-block">
-    <h4 class="card-title">Volunteer</h4>
-    <h6 class="card-subtitle mb-2 text-muted">All ages welcome</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <button
-      id="volunteer-btn"
-      data-toggle="collapse"
-      class="btn btn-warning"
-      type="button"
-      href="#volunteer-collapse"
-      aria-expanded="false"
-      aria-controlls="volunteer-collapse"
-    >
-     Sign Up
-   </button>
-    <div class="collapse" id="volunteer-collapse">
-      {{> volunteerForm }}
+<div class="row">
+  <div class="col-xs-12">
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">Register Student</h4>
+        <h6 class="card-subtitle mb-2 text-muted">Requires Parent Signature</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <button id="register-btn" class="btn btn-primary" type="button">Register</button>
+      </div>
     </div>
   </div>
-</div>
-<div class="card">
-  <div class="card-block">
-    <h4 class="card-title">Admin Login</h4>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <button id="admin-btn" class="btn btn-success" type="button">Login</button>
+  <div class="col-xs-12">
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">Volunteer</h4>
+        <h6 class="card-subtitle mb-2 text-muted">All ages welcome</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <button
+        id="volunteer-btn"
+        data-toggle="collapse"
+        class="btn btn-warning"
+        type="button"
+        href="#volunteer-collapse"
+        aria-expanded="false"
+        aria-controlls="volunteer-collapse"
+        >
+        Sign Up
+      </button>
+      <div class="collapse" id="volunteer-collapse">
+        {{> volunteerForm }}
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="col-xs-12">
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">Admin Login</h4>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <button id="admin-btn" class="btn btn-success" type="button">Login</button>
+      </div>
+    </div>
   </div>
 </div>

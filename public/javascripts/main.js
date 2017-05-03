@@ -23,7 +23,7 @@ $("#volunteer-form").on("submit", function (e) {
                   }, {})
 
   $.ajax({
-    url: "localhost:3000/api/volunteers",
+    url: "localhost:3000/api",
     method: "POST",
     body: formData,
     dataType: "json",

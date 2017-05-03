@@ -26,35 +26,45 @@ var ethnicity;
 router.post('/', function(req, res, next) {
 
 	$.ajax({
-		url: 'https://demo.docusign.net/restapi/v2/accounts/2953157/templates/9fd73e2d-833f-479c-bf5f-b8eb8185fcc8/recipients/56047259/tabs',
-		headers:{  "Username":"kevinlay689@yahoo.com",
-                "Password":"Kevinlay1!",
-                "IntegratorKey":"6a4e020b-178a-4cd7-a2b2-c77c0c01bac1" } 
-
+		type: 'POST',
+		url: 'https://demo.docusign.net/restapi/v2/accounts/2953157/envelopes',
+		headers:{  "X-DocuSign-Authentication": { "Username":"kevinlay689@yahoo.com", "Password":"Kevinlay1!","IntegratorKey":"6a4e020b-178a-4cd7-a2b2-c77c0c01bac1" },
+		"Content-Type":"application/json"
+		},
+		body:{
+  			"templateId": "9fd73e2d-833f-479c-bf5f-b8eb8185fcc8"
+		},
+		success: function() {
+			console.log("success");
+			res.sendStatus(200);
+		},
+		error: function() {
+			console.log("failure");
+		}
 	});
 	
-	child_fn = req.body.child_fn;
-	child_ln = req.body.child_ln;
-	child_email = req.body.child_email;
-	child_address = req.body.child_address;
-	child_city = req.body.child_city;
+	// child_fn = req.body.child_fn;
+	// child_ln = req.body.child_ln;
+	// child_email = req.body.child_email;
+	// child_address = req.body.child_address;
+	// child_city = req.body.child_city;
 
-	child_state = req.body.child_state;
-	child_grade = req.body.child_grade;
-	child_bday = req.body.child_bday;
-	parent_fn = req.body.parent_fn;
-	parent_ln = req.body.parent_ln;
+	// child_state = req.body.child_state;
+	// child_grade = req.body.child_grade;
+	// child_bday = req.body.child_bday;
+	// parent_fn = req.body.parent_fn;
+	// parent_ln = req.body.parent_ln;
 
-	parent_email = req.body.parent_email;
-	phone = req.body.phone;
-	income = req.body.income;
-	walk_home = req.body.walk_home;
-	ethnicity = req.body.ethnicity;
+	// parent_email = req.body.parent_email;
+	// phone = req.body.phone;
+	// income = req.body.income;
+	// walk_home = req.body.walk_home;
+	// ethnicity = req.body.ethnicity;
 
 	//var ch = JSON.parse(req);
 	console.log(child_fn);
 
-	res.sendStatus(200);
+	//res.sendStatus(200);
 });
 
 module.exports = router;
