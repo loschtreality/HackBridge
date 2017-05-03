@@ -1,0 +1,63 @@
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#applicants" role="tab">Applicants</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#volunteers" role="tab">Volunteers</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#logout" role="tab">Logout</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+
+
+<div class="tab-content">
+  <div class="tab-pane" id="applicants" role="tabpanel">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Applicant Name</th>
+          <th>Status</th>
+          <th>Document</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each this}}
+          {{Applicants_Info}}
+            <tr>
+              <td>{{applicant_name}}</td>
+              <td>{{applicant_signed}}</td>
+              <td>{{applicant_docusign}}</td>
+            </tr>
+          {{/Applicants_Info}} 
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <div class="tab-pane" id="volunteers" role="tabpanel">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Volunteer Name</th>
+          <th>Status</th>
+          <th>Document</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each this}}
+          {{#Volunteers_Info}}
+            <tr>
+              <td>{{volunteer_name}}</td>
+              <td>{{volunteer_status}}</td>
+              <td>{{volunteer_doc}}</td>
+            </tr>
+          {{/Volunteers_Info}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <div class="tab-pane" id="logout" role="tabpanel">You have logout</div>
+</div>
