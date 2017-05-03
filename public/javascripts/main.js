@@ -17,20 +17,20 @@ $("#volunteer-btn").click(function (e) {
 $("#volunteer-form").on("submit", function (e) {
   e.preventDefault()
   const formData = $(this).serializeArray()
-                  .reduce((respObj, current) => {
-                    respObj[current.name] = current.value
-                    return respObj
-                  }, {})
+    .reduce((respObj, current) => {
+      respObj[current.name] = current.value
+      return respObj
+    }, {})
 
   $.ajax({
     url: "localhost:3000/api",
     method: "POST",
     body: formData,
     dataType: "json",
-    success: function(resp) {
+    success: function (resp) {
       console.info("This successfully posted")
     },
-    error: function(err) {
+    error: function (err) {
       console.warn(err)
     }
   })
@@ -39,7 +39,14 @@ $("#volunteer-form").on("submit", function (e) {
 /**
  * Login => Redirect to Admin Portal
  */
- $("#admin-btn").click(function(e){
-   window.location.href = '/admin'
- })
+$("#admin-btn").click(function (e) {
+  window.location.href = '/admin'
+})
+
+/**
+ * Volunteer Form - Page changes
+ */
+$('.volunteer-btn').click(function (e) {
+  $('.volunteer').toggleClass('active');
+})
 
