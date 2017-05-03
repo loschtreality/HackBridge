@@ -22,12 +22,16 @@ var walk_home;
 var ethnicity;
 
 
-/* GET users listing. */
-router.get('/users', function(req, res, next) {
-  res.render('users', { title: 'Express' });
-});
 
 router.post('/', function(req, res, next) {
+
+	$.ajax({
+		url: 'https://demo.docusign.net/restapi/v2/accounts/2953157/templates/9fd73e2d-833f-479c-bf5f-b8eb8185fcc8/recipients/56047259/tabs',
+		headers:{  "Username":"kevinlay689@yahoo.com",
+                "Password":"Kevinlay1!",
+                "IntegratorKey":"6a4e020b-178a-4cd7-a2b2-c77c0c01bac1" } 
+
+	});
 	
 	child_fn = req.body.child_fn;
 	child_ln = req.body.child_ln;
