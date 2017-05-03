@@ -15,12 +15,12 @@ a {
  * General Classes
  */
 
-.half-hr {
-  width: 50%;
-}
-
 .card {
   margin-top: 20px;
+}
+
+.space-below {
+  margin-bottom: 20px;
 }
 
 .inline {

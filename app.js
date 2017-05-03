@@ -9,7 +9,7 @@ var hbs = require('hbs');
 var index = require('./routes/index');
 var api = require('./routes/api');
 var admin = require('./routes/admin');
-var userShow = require('./routes/user');
+var userShow = require('./routes/users');
 var app = express();
 
 //handlebars partials setup
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/api', api);
 app.use('/admin', admin)
-app.use('/user/:id', userShow)
+app.use('/users/:id', userShow)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -8,9 +8,9 @@ router.get('/', function(req, res, next) {
     last_name: "loren",
     student_email: "test@test.com",
     student_mobile: "7143372107",
-    street: "1234 Miracle Mile",
+    student_street: "1234 Miracle Mile",
     city_state: "Los Angeles, CA",
-    zip: "94103",
+    student_zip: "94103",
     grade: "7",
     applicant_school: "Hack Academy",
     birth_month: "Feb",
@@ -31,7 +31,7 @@ router.get('/', function(req, res, next) {
     interest_3: "Chemistry",
   }
 
-  res.render('user', dummyObj);
+  res.render('userShow', dummyObj);
 });
 
 
