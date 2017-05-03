@@ -43,3 +43,7 @@ $("#volunteer-form").on("submit", function (e) {
    window.location.href = '/admin'
  })
 
+ $("#logout").click(function(e){
+   window.location.href = '/'
+ })
+
