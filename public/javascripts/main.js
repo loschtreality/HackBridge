@@ -1,15 +1,17 @@
 /**
  * Creates accordian dropdown for volunteer signup
  */
-$("#volunteer-btn").click(function (e) {
-  if ($(this).hasClass("btn-danger")) {
-    $(this).removeClass("btn-danger").addClass("btn-warning")
-    $(this).text("Sign Up")
-  } else {
-    $(this).removeClass("btn-warning").addClass("btn-danger")
-    $(this).text("Close")
-  }
-})
+// $("#volunteer-btn").click(function (e) {
+//   if ($(this).hasClass("btn-danger")) {
+//     $(this).removeClass("btn-danger").addClass("btn-warning")
+//     $(this).text("Sign Up")
+//   } else {
+//     $(this).removeClass("btn-warning").addClass("btn-danger")
+//     $(this).text("Close")
+//   }
+// })
+
+
 
 /**
  * Send request to server from volunteer form submission
@@ -56,6 +58,10 @@ $("#register-btn").click(function (e) {
  */
 $('.volunteer-btn').click(function (e) {
   $('.volunteer').toggleClass('active');
+})
+
+$("#volunteer-btn").click(function (e) {
+  window.location.href = '/volunteer';
 })
 
  $("#logout").click(function(e){
