@@ -13,7 +13,20 @@
     <h4 class="card-title">Volunteer</h4>
     <h6 class="card-subtitle mb-2 text-muted">All ages welcome</h6>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <button id="volunteer-btn" class="btn btn-warning" type="button">Sign Up</button>
+    <button
+      id="volunteer-btn"
+      data-toggle="collapse"
+      class="btn btn-warning"
+      type="button"
+      href="#volunteer-collapse"
+      aria-expanded="false"
+      aria-controlls="volunteer-collapse"
+    >
+     Sign Up
+   </button>
+    <div class="collapse" id="volunteer-collapse">
+      {{> volunteerForm }}
+    </div>
   </div>
 </div>
 <div class="card">

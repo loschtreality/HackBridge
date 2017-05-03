@@ -11,3 +11,16 @@ a {
 .card {
   margin-top: 20px;
 }
+
+.inline {
+  display: inline;
+}
+
+#volunteer-collapse {
+  margin-top: 20px;
+}
+
+#volunteer-requirements > li {
+  margin: 10px 0px;
+  line-height: 1.5;
+}
