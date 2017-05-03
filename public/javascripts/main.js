@@ -22,6 +22,8 @@ $("#volunteer-form").on("submit", function (e) {
       return respObj
     }, {})
 
+  db.add("volunteers", formData)
+
   $.ajax({
     url: "localhost:3000/api",
     method: "POST",
