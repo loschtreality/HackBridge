@@ -25,11 +25,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>{{applicant_name}}</td>
-          <td>{{applicant_signed}}</td>
-          <td>{{applicant_docusign}}</td>
-        </tr>
+        {{#each this}}
+          {{Applicants_Info}}
+            <tr>
+              <td>{{applicant_name}}</td>
+              <td>{{applicant_signed}}</td>
+              <td>{{applicant_docusign}}</td>
+            </tr>
+          {{/Applicants_Info}} 
+        {{/each}}
       </tbody>
     </table>
   </div>
@@ -43,11 +47,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>{{volunteer_name}}</td>
-          <td>{{volunteer_status}}</td>
-          <td>{{volunteer_doc}}</td>
-        </tr>
+        {{#each this}}
+          {{#Volunteers_Info}}
+            <tr>
+              <td>{{volunteer_name}}</td>
+              <td>{{volunteer_status}}</td>
+              <td>{{volunteer_doc}}</td>
+            </tr>
+          {{/Volunteers_Info}}
+        {{/each}}
       </tbody>
     </table>
   </div>
