@@ -1,0 +1,120 @@
+<div class="row space-below">
+    <h1 class="display-4">{{first_name}} {{last_name}}</h1>
+</div>
+
+<div class="row  space-below">
+    <table class="table">
+        <thead>
+            <th>
+                <h3>Student Info:</h3></th>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Email:</th>
+                <td class="text-left">{{student_email}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Mobile:</th>
+                <td class="text-left">{{student_mobile}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Address:</th>
+                <td class="text-left">{{student_street}}</td>
+            </tr>
+            <tr>
+                <th scope="row">City:</th>
+                <td class="text-left">{{city_state}}, {{student_zip}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Grade:</th>
+                <td class="text-left">{{grade}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Birthday:</th>
+                <td class="text-left">{{birth_month}} {{birth_day}} {{birth_year}}</td>
+            </tr>
+        </tbody>
+        <thead>
+            <th><h3>Parent Info:</h3></th>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Name:</th>
+                <td>{{guardian_fullname}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Email:</th>
+                <td>{{guardian_email}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Workplace:</th>
+                <td>{{guardian_workplace}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Home Phone:</th>
+                <td>{{guardian_home_number}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Mobile Phone:</th>
+                <td>{{guardian_mobile_number}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Work Phone:</th>
+                <td>{{guardian_work_number}}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Date Signed:</th>
+                <td>{{date_signed}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 class="">App Info:</h3>
+<div id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="card">
+        <div class="card-header" role="tab" id="headingOne">
+            <h5 class="mb-0">
+      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Collapsible Group Item #1
+      </a>
+    </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+            <div class="card-block">
+                {{essay_1}}
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" role="tab" id="headingTwo">
+            <h5 class="mb-0">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Collapsible Group Item #2
+      </a>
+    </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="card-block">
+                {{essay_2}}
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" role="tab" id="headingThree">
+            <h5 class="mb-0">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Collapsible Group Item #3
+      </a>
+    </h5>
+        </div>
+        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="card-block">
+                {{essay_3}}
+            </div>
+        </div>
+    </div>
+</div>
