@@ -1,11 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET admin page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'HackBridge' });
+  res.render('volunteer', { title: 'volunteer site' });
 });
 
 module.exports = router;
-
-//title: query the server
