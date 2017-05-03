@@ -6,7 +6,7 @@ var reg_template = {
 }
 /* GET student registration page. */
 router.get('/registration', function(req, res, next) {
-  res.render('registration', {reg_template);
+  res.render('registration', {reg_template});
 });
 
 module.exports = router;
