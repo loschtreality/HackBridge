@@ -6,6 +6,20 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+/*div.container {
+  position: relative;
+  overflow: hidden;
+}
+div.container img {
+  background-image: url("../images/Jumping%20Symantec%20Capes_cropped.jpg");
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+}*/
 
 a {
   color: #00B7FF;
