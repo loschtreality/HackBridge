@@ -35,3 +35,11 @@ $("#volunteer-form").on("submit", function (e) {
     }
   })
 })
+
+/**
+ * Login => Redirect to Admin Portal
+ */
+ $("#admin-btn").click(function(e){
+   window.location.href = '/admin'
+ })
+
