@@ -26,18 +26,34 @@ $("#volunteer-form").on("submit", function (e) {
 
   db.add("volunteers", formData)
 
-  $.ajax({
-    url: "localhost:3000/api",
-    method: "POST",
-    body: formData,
-    dataType: "json",
-    success: function (resp) {
-      console.info("This successfully posted")
-    },
-    error: function (err) {
-      console.warn(err)
-    }
-  })
+  // window.location.href = '/'
+  // $.ajax({
+  //   url: "localhost:3000/api",
+  //   method: "POST",
+  //   body: formData,
+  //   dataType: "json",
+  //   success: function (resp) {
+  //     console.info("This successfully posted")
+  //   },
+  //   error: function (err) {
+  //     console.warn(err)
+  //   }
+  // })
+})
+/**
+ * Send request to server from student form submission
+ */
+$("#studentForm").on("submit", function (e) {
+  e.preventDefault()
+  const formData = $(this).serializeArray()
+    .reduce((respObj, current) => {
+      respObj[current.name] = current.value
+      return respObj
+    }, {})
+
+  db.add("students", formData)
+
+  window.location.href = '/'
 })
 
 /**
@@ -49,6 +65,9 @@ $("#admin-btn").click(function (e) {
 /**
  * Student Form => Redirect to '/student'
  */
+$("#register-btn").click(function (e) {
+  window.location.href = '/student'
+})
 $("#register-btn").click(function (e) {
   window.location.href = '/student'
 })
@@ -67,4 +86,8 @@ $("#volunteer-btn").click(function (e) {
  $("#logout").click(function(e){
    window.location.href = '/'
  })
+
+ $("#volunteerSubmit").click(function (e) {
+  window.location.href = '/';
+})
 
